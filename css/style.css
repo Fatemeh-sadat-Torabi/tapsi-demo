@@ -1,0 +1,272 @@
+/* Reset Section */
+
+* , *::after , *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* list-style: none; */
+}
+
+/* Root Variables */
+
+:root{
+    --color-primary: #ff5722 ;
+    --color-secondary-dark: #ffa589;
+    --color-secondary-light: #fff6f2;
+    --color-navbar: #f8f8f8;
+    --color-headings:#000000 ; 
+    --color-body:#333333 ;
+    --color-white: #ffffff;
+    --color-primary-badge: #fe4e00 ;
+    --color-secondary-badge: #ff7a50;
+
+}
+
+/* Typography Section */
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color: var(--color-body);
+    font-size: 1.4rem;
+}
+
+h1, h2 , h3 {
+    color: var(--color-headings);
+    font-weight: 700;
+    
+}
+h1{
+    font-size: 2.5rem;
+}
+h2,h3{
+    font-size: 2.2rem;
+}
+
+/* Typography Setting in Responsive Mode section */
+
+@media screen and (min-width : 1024px) {
+    body{
+        font-size: 1.8rem;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 2.8rem;
+    }
+
+}
+
+/* Buttons */
+
+.btn{
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    border-radius: 8px;
+    padding: 2rem  2.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    
+}
+.btn--primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.btn--secondary{
+    background-color: var(--color-secondary-dark);
+    color: var(--color-white);
+}
+.btn--block{
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+/* Buttons Setting in Responsive Mode */
+
+@media screen and (min-width:1024px) {
+    .btn{
+        font-size: 1.6rem;
+    }
+    .btn--block{
+        font-size: 2rem;
+    }
+}
+
+/* Badge Section */
+
+.badge{
+    border-radius: 32px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0.5rem 1.4rem;
+    border: 2px solid var(--color-primary-badge);
+    background-color: var(--color-secondary-light);
+    color: var(--color-primary);
+    line-height: 2rem;
+ 
+}
+
+.badge--primary{
+    border: 2px solid var(--color-secondary-badge);
+    background-color: var(--color-primary-badge);
+    color: #ffffff;    
+}
+
+@media screen and(min-width:1024px) {
+    .badge{
+        font-size: 1.4rem;
+    }
+}
+
+/* List Section */
+
+/* To add image before li :
+ 1- use list-style-image ! (Not a good way!!) 
+ 2- use list__item::before ! (It is better!!)
+ 3- use background Image for list__item! (Best Way)
+ second way is more in use ! */
+
+.list{
+    list-style: none;
+    font-size: 1.8rem;
+}
+ 
+.list__item{
+    color: #444242
+}
+
+.list--inline .list__item{
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+/* second way : */
+/* .list--tick .list__item::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url(../assets/images/square-check-solid.svg) no-repeat;
+    padding-right: 4.2rem; 
+    
+} */
+
+/* Third way: */
+.list--tick .list__item{
+    background: url(../assets/images/square-check-solid.svg) no-repeat;
+    background-position: right center;
+    padding-right: 4.2rem;
+    margin-bottom: 3.6rem;
+}
+
+/* Plan Section */
+
+.block-plan{
+    display: grid;
+    gap: 8rem 6rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit ,minmax(250px,311px));
+    margin-top: 3rem;
+}
+
+.plan{  
+    font-size: 1.8rem;
+    transition: all 0.2 ease-out;
+}
+
+.card{
+    border-radius: 20px;
+    margin: 2rem 2rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px 10px rgba(0,0,0,0.1);
+}
+
+.card--primary .card__header{
+    background-color: var(--color-secondary-badge);
+}
+
+.card--secondary .card__header{
+    background-color: var(--color-secondary-dark);
+}
+
+.card--primary .card__body , 
+.card--secondary .card__body
+{
+    background-color: var(--color-secondary-light);
+}
+
+.card__header , .card__body {
+    /* padding: 40px 22px 56px 34px; */
+    padding: 3rem 2.5rem;
+}
+
+.card__header{
+    border-radius: 20px 20px 0 0;
+    color: var(--color-white);
+}
+
+.card__body{
+    border-radius: 0 0 20px 20px;
+}
+
+.plan__introduction{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.plan__price{
+    font-size: 3rem;
+}
+
+.plan__biling-cycle{
+    font-size: 1.4rem;
+}
+
+.plan__description{
+    display: block;
+    margin-top: 1rem;
+}
+
+.plan .btn--block{
+    font-size: 1.6rem;
+    margin-top: 10.3rem;
+}
+
+.plan--popular{
+    transform: scale(1.1);
+}
+
+.plan--popular:hover{
+    transform: scale(1.2);
+}
+
+.plan:hover{
+    transform: scale(1.05);
+}
+
+@media screen and (min-width:1024px){   
+    .plan .btn--block{
+        font-size: 2rem;
+    }
+
+    /* .card__header , .card__body {
+        padding: 40px 22px 56px 42px;
+    } */
+}
+
+/* Container */
+.container{
+    max-width: 1140px;  /* if use auto-fill instead auto-fit : then i will comment this line! */
+    margin: 3rem auto;
+}
+
+/*  */
