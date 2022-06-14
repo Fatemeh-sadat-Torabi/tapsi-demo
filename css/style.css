@@ -30,6 +30,7 @@ html{
 body{
     color: var(--color-body);
     font-size: 1.4rem;
+    line-height: 1.6;
 }
 
 h1, h2 , h3 {
@@ -43,7 +44,9 @@ h1{
 h2,h3{
     font-size: 2.2rem;
 }
-
+p{
+    text-align: justify;
+}
 /* Typography Setting in Responsive Mode section */
 
 @media screen and (min-width : 1024px) {
@@ -269,4 +272,53 @@ h2,h3{
     margin: 3rem auto;
 }
 
-/*  */
+/* Feature Section  */
+.feature{
+    display: grid;
+    justify-content: center;
+}
+
+.feature__title{
+    margin-bottom: 1.5rem;
+}
+
+.feature__text{
+    margin-bottom: 2rem;
+    /* max-width: 36rem; */
+}
+
+.feature .btn{
+    padding: 1.9rem 2.4rem;
+}
+
+.feature__image > img {
+    width: 70%;
+    height: auto;
+}
+
+.feature__image{
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width:1024px){
+    .feature{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .feature__title{
+        margin-bottom: 1.3rem;
+    }
+    .feature__image{
+        order: 2;
+        margin-bottom: 0;
+    }
+    .feature__image >img{
+        width: 80%;
+        height: auto;
+    }
+    .feature__detail{
+        order: 1;
+    }
+}
