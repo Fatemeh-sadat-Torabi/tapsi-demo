@@ -1,52 +1,88 @@
-<section class="container">
-    <div class="contact-description">
-        <h2 class="title">ارتباط با ما</h2>
-        <p class="description">شما می‌توانید نظرات و انتقادات خود را برای ما بفرستید</p>
-    </div>
-    <div class="contact-us">
-        
-        <div class="contact-us__social">
-            icons
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TapsiTaxi Demo</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/6b37b72fcb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <section class="container">
+        <div class="contact-description">
+            <h2 class="title">ارتباط با ما</h2>
+            <p class="description">شما می‌توانید نظرات و انتقادات خود را برای ما ارسال کنید</p>
         </div>
-        <div class="contact-us__icons">
-            <div class="icon-holder">
-                <span class="icon-holder__container">
-                    <i class="fa-solid fa-location-dot"></i>
+        <div class="contact-us">
+            
+            <div class="contact-us__social">
+                <span class="icon-container">
+                    <svg class="icon">
+                        <use xlink:href="./assets/images/svg-sprite.svg#coloredFacebook"></use>
+                    </svg> 
                 </span>
-                <span class="icon-holder__label">
-                    ایران، سمنان، دامغان
+                <span class="icon-container">
+                    <svg class="icon">
+                        <use xlink:href="./assets/images/svg-sprite.svg#coloredLinkedin"></use>
+                    </svg> 
+                </span>
+                <span class="icon-container">
+                    <svg class="icon">
+                        <use xlink:href="./assets/images/svg-sprite.svg#coloredTwitter"></use>
+                    </svg> 
                 </span>
             </div>
-            <div class="icon-holder">
-                <span class="icon-holder__container">
-                    <i class="fa-solid fa-mobile-screen"></i>
-                </span>
-                <span class="icon-holder__label">
-                    09128323721
-                </span>
+            <div class="contact-us__icons">
+                <div class="icon-holder">
+                    <span class="icon-holder__container">
+                        <svg class="icon">
+                            <use xlink:href="./assets/images/svg-sprite.svg#coloredLocation"></use>
+                        </svg>
+                    </span>
+                    <span class="icon-holder__label">
+                        ایران، سمنان، دامغان، بلوار 1 ، خیابان 2، کوچه 3
+                    </span>
+                </div>
+                <div class="icon-holder">
+                    <span class="icon-holder__container">
+                        <svg class="icon">
+                            <use xlink:href="./assets/images/svg-sprite.svg#coloredMobi"></use>
+                        </svg>
+                    </span>
+                    <span class="icon-holder__label">
+                        09128323721
+                    </span>
+                </div>
+                <div class="icon-holder">
+                    <span class="icon-holder__container">
+                        <svg class="icon">
+                            <use xlink:href="./assets/images/svg-sprite.svg#coloredEmail"></use>
+                        </svg>
+                    </span>
+                    <span class="icon-holder__label">
+                        fs.torabi94@gmail.com
+                    </span>
+                </div>
             </div>
-            <div class="icon-holder">
-                <span class="icon-holder__container">
-                    <i class="fa-solid fa-envelope"></i>
-                </span>
-                <span class="icon-holder__label">
-                    fs.torabi94@gmail.com
-                </span>
+            <div class="contact-us__map">
+                <img src="./assets/images/map.png" alt="map">
+            </div>
+            <div class="contact-us__form">
+                <div class="form-wrapper">
+                    <h3>نظرات شما</h3>
+                    <form action="">
+                        <input type="text" placeholder="نام خود را وارد کنید">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <button type="submit" class="btn btn--primary">ثبت نظر</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="contact-us__map">
-            <img src="./assets/images/map.png" alt="map">
-        </div>
-        <div class="contact-us__form">
-            <div class="form-wrapper">
-                <h3>نظرات شما</h3>
-                <form action="">
-                    <input type="text" placeholder="نام خود را وارد کنید">
-                    <input type="email" placeholder="ایمیل خود را وارد کنید" dir="ltr">
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                    <button type="submit" class="btn btn--primary">ثبت نظر</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+    
+</body>
+</html>
