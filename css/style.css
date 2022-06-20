@@ -528,3 +528,12 @@ input{
 
 
 /* FOOTER SECTION */
+.mainFooter{
+    background-color: #000;
+    color: #fff;
+    min-height: 200px;
+}
+
+.mainFooter .footer{
+    flex-direction: column;
+}
